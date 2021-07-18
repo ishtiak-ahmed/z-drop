@@ -1,0 +1,12 @@
+@import "./_colors.scss";
+
+.header {
+  background-color: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  &__logo {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid $lighter-gray;
+    color: $dark-green;
+  }
+}
