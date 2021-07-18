@@ -3,10 +3,10 @@
 .orders {
   border-radius: 1em;
   background-color: #fff;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1em;
+  border: 1px solid $lighter-gray;
+  margin-bottom: 2em;
   &__header {
-    padding: 1em;
+    padding: 1.5em;
     border-bottom: 1px solid $lighter-gray;
     display: flex;
     justify-content: space-between;
@@ -16,10 +16,11 @@
     }
   }
   &__item {
-    padding: 1em;
+    padding: 1.5em;
     display: grid;
     grid-template-columns: 160px 1fr auto;
     grid-gap: 2em;
+    border-bottom: 1px solid $lighter-gray;
     &__img {
       padding: 10px;
       border: 1px solid $lighter-gray;

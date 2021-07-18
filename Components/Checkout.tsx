@@ -8,9 +8,9 @@ const Checkout = () => {
   useEffect(() => {
     const newData = {};
     cart.forEach((item) => {
-      if (newData[item.compnay]) {
-        const newList = [...newData[item.company], item];
-        newData[item.company] = [...newList];
+      if (newData[item.company]?.length) {
+        // const newList = ;
+        newData[item.company] = [...newData[item.company], item];
       } else {
         newData[item.company] = [item];
       }

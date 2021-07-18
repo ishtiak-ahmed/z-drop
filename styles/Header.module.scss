@@ -8,6 +8,13 @@
     padding: 1em;
     border-bottom: 1px solid $lighter-gray;
     color: $dark-green;
+    h3 {
+      display: flex;
+      gap: 1em;
+      span {
+        color: lightseagreen;
+      }
+    }
   }
   &__menu {
     display: flex;
@@ -17,6 +24,11 @@
     padding: 0.8em;
     &__item {
       color: $light-gray;
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: $orange;
+      }
     }
   }
 }

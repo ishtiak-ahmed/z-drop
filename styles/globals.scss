@@ -1,4 +1,5 @@
 @import "./colors";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 html,
 body {
   padding: 0;
@@ -25,6 +26,7 @@ img {
 .icon {
   font-family: "Material Icons";
   margin-right: 1em;
+  font-size: 20px;
 }
 
 .btn {
@@ -57,7 +59,7 @@ img {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-gap: 1em;
+  grid-gap: 2em;
 }
 
 .off {
@@ -70,6 +72,22 @@ img {
 
 .gray {
   color: $light-gray;
+}
+
+.coupon {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1em;
+  align-items: center;
+}
+
+.right {
+  text-align: right;
+}
+
+hr {
+  border: 0px;
+  border-top: 1px dashed #000;
 }
 
 h1,
