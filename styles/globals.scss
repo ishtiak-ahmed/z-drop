@@ -1,7 +1,9 @@
+@import "./colors";
 html,
 body {
   padding: 0;
   margin: 0;
+  background-color: $off-white;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -17,4 +19,30 @@ a {
 
 .icon {
   font-family: "Material Icons";
+  margin-right: 1em;
+}
+
+.highlights {
+  color: $orange;
+}
+
+.cart__header {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  &__badge {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1em;
 }

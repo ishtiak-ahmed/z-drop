@@ -7,7 +7,7 @@ const Header = () => {
             <div className={classes.header__logo}>
                 <h2>z drop</h2>
             </div>
-            <nav>
+            <nav className={classes.header__menu}>
                 <MenuItem to="/" icon="shopping_cart" menu="Checkout" />
                 <MenuItem to="/cart" icon="place" menu="Shipping Address" />
                 <MenuItem to="/" icon="payment" menu="Payment" />

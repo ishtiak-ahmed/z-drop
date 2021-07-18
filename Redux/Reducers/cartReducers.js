@@ -9,6 +9,7 @@ const initialState = [
     discount: 15,
     color: "White",
     size: "XL",
+    delivery: 40,
   },
   {
     name: "Men Tee Shirt Skinny Fit Low",
@@ -18,6 +19,7 @@ const initialState = [
     discount: 25,
     color: "Black",
     size: "XL",
+    delivery: 40,
   },
   {
     name: "Men Striped Shirt Skinny Fit Low",
@@ -27,6 +29,7 @@ const initialState = [
     discount: 25,
     color: "Gray",
     size: "XL",
+    delivery: 40,
   },
   {
     name: "Men Striped Casual Spread Shirt Super Skinny Fit Low",
@@ -34,6 +37,9 @@ const initialState = [
     price: 3025,
     company: "Adidas",
     discount: 25,
+    delivery: 40,
+    color: "Black",
+    size: "XL",
   },
 ];
 const cartReducers = (state = initialState, action) => {
@@ -41,8 +47,8 @@ const cartReducers = (state = initialState, action) => {
     case ADD_TO_CART:
       return state;
     case REMOVE_FROM_CART:
-      const newCart = state.cart.filter((item) => item.id != action.id);
-      return { ...state, cart: newCart };
+      const newCart = state.filter((item) => item.id != action.id);
+      return [...newCart];
     default:
       return state;
   }
