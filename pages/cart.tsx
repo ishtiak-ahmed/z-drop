@@ -1,12 +1,13 @@
+import Image from "next/image";
 import { useSelector } from "react-redux";
 import Checkout from "../Components/Checkout";
 import Header from "../Components/Header";
 import Icon from "../Components/Icon";
 import OrderSummary from "../Components/OrderSummary";
-import { OrderType } from "../type";
+import { OrderType, RootState } from "../type";
 
 const Cart = () => {
-  const cartdata: OrderType[] = useSelector((state) => state.cart);
+  const cartdata: OrderType[] = useSelector((state: RootState) => state.cart);
   return (
     <>
       <Header />
@@ -22,7 +23,12 @@ const Cart = () => {
           </p>
         </div>
         <div className="cart__header__badge">
-          <img src="/img/shield-star-fill.svg" alt="" />
+          <Image
+            src="/img/shield-star-fill.svg"
+            alt=""
+            width={25}
+            height={25}
+          />
           <span className="highlights">100% Secure</span>
         </div>
       </div>

@@ -3,10 +3,13 @@ import OrderItem from "./OrderItem";
 import classes from "../styles/Checkout.module.scss";
 import Icon from "./Icon";
 
-const Orders = ({ orders }: OrderType[]) => {
+const Orders = ({ orders }) => {
   return (
     <div className={classes.orders}>
       <div className={classes.orders__header}>
+        <div className={classes.orders__header__logo}>
+          <span>{orders[0].company[0]}</span>
+        </div>
         <div>
           <h3>
             {orders[0].company}

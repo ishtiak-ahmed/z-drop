@@ -3,8 +3,9 @@ import { OrderType } from "../type";
 import { removeFromCart } from "../Redux/Actions/cartActions";
 import classes from "../styles/Checkout.module.scss";
 import heart from "/img/heart.svg";
+import Image from "next/image";
 
-const OrderItem = ({ item }: OrderType) => {
+const OrderItem = ({ item }) => {
   const dispatch = useDispatch();
   const handleRemove = () => {
     dispatch(removeFromCart(item.id));
@@ -13,7 +14,13 @@ const OrderItem = ({ item }: OrderType) => {
     <div className={classes.orders__item}>
       <div className={classes.orders__item__img}>
         <div className={classes.orders__item__img__inner}>
-          <img src={item.image} alt="product image" />
+          {/* <img src={item.image} alt="product image" /> */}
+          <Image
+            src={item.image}
+            width={160}
+            height={180}
+            alt="Product Image"
+          />
         </div>
       </div>
       <div className={classes.orders__item__info}>
@@ -31,10 +38,10 @@ const OrderItem = ({ item }: OrderType) => {
       </div>
       <div className={classes.orders__item__btn}>
         <span className="btn">
-          <img src="/img/heart.svg" alt="" />
+          <Image src="/img/heart.svg" alt="" height={25} width={25} />
         </span>
         <span className="btn" onClick={handleRemove}>
-          <img src="/img/delete.svg" alt="" />
+          <Image src="/img/delete.svg" alt="" width={25} height={25} />
         </span>
       </div>
     </div>

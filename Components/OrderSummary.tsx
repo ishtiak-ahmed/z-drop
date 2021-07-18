@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import classes from "../styles/Summary.module.scss";
+import { RootState } from "../type";
 import Icon from "./Icon";
 
 const OrderSummary = () => {
-  const cart = useSelector((state) => state.cart);
-  const [summary, setSummary] = useState({});
+  const cart = useSelector((state: RootState) => state.cart);
+  const [summary, setSummary] = useState({
+    total: 0,
+    item: 0,
+  });
 
   useEffect(() => {
     const total: number = cart.reduce(
@@ -13,11 +17,7 @@ const OrderSummary = () => {
       0
     );
     const item: number = cart.length;
-    const deliveryCharge: number = cart.reduce(
-      (sum, item) => sum + item.delivery,
-      0
-    );
-    setSummary({ total, item, deliveryCharge });
+    setSummary({ total, item });
   }, [cart]);
   return (
     <div className={classes.order__summary}>

@@ -8,9 +8,19 @@
   &__header {
     padding: 1.5em;
     border-bottom: 1px solid $lighter-gray;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
+    &__logo {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: 2px solid $light-green;
+      font-size: 20px;
+      display: grid;
+      place-items: center;
+      margin-right: 1em;
+    }
     &__right {
       text-align: right;
     }

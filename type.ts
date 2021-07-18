@@ -7,3 +7,7 @@ export type OrderType= {
     size: string
     company: string
 }
+
+export type RootState = {
+    cart: OrderType[]
+}

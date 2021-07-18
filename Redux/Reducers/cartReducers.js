@@ -32,7 +32,7 @@ const initialState = [
     color: "Black",
     size: "XL",
     delivery: 40,
-    image: "/img/striped.png",
+    image: "/img/black-t.png",
   },
   {
     name: "Men Striped Shirt Skinny Fit Low",
@@ -46,7 +46,7 @@ const initialState = [
     image: "/img/striped.png",
   },
   {
-    name: "Men Striped Casual Spread Shirt Super Skinny Fit Low",
+    name: "Spa Master Molecule",
     id: 9,
     price: 3025,
     company: "Adidas",

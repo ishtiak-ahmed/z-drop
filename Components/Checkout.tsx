@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { RootState } from "../type";
 import Orders from "./Orders";
 
 const Checkout = () => {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state: RootState) => state.cart);
   const [filterData, setFilterData] = useState({});
   useEffect(() => {
     const newData = {};
