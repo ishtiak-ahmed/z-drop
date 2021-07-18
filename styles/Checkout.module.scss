@@ -1,0 +1,46 @@
+@import "./colors";
+
+.orders {
+  border-radius: 1em;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+  &__header {
+    padding: 1em;
+    border-bottom: 1px solid $lighter-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__right {
+      text-align: right;
+    }
+  }
+  &__item {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 160px 1fr auto;
+    grid-gap: 2em;
+    &__img {
+      padding: 10px;
+      border: 1px solid $lighter-gray;
+      height: 180px;
+      &__inner {
+        max-height: 100%;
+        overflow: hidden;
+      }
+    }
+    &__info {
+      display: grid;
+      grid-template-rows: 2fr 1fr 1fr 1fr;
+      grid-gap: 1em;
+      span {
+        margin-right: 1em;
+      }
+    }
+    &__btn {
+      display: flex;
+      justify-content: space-between;
+      gap: 1em;
+    }
+  }
+}
