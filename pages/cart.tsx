@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useSelector } from "react-redux";
 import Checkout from "../Components/Checkout";
 import Header from "../Components/Header";
@@ -36,6 +37,14 @@ const Cart = () => {
         <Checkout />
         <OrderSummary />
       </main>
+      <footer>
+        <p style={{ textAlign: "center", marginBottom: "1em" }}>
+          Developed by{" "}
+          <Link href="https://www.linkedin.com/in/ishtiak-ahmed-1606/">
+            <a>Ishtiak Ahmed</a>
+          </Link>
+        </p>
+      </footer>
     </>
   );
 };
